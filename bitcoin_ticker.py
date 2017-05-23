@@ -76,10 +76,16 @@ class BitcoinTicker:
 				sleep(1)
 
 	def update(self):
-		# change this to the currency of your choice
-		res = urequests.get("http://api.coindesk.com/v1/bpi/currentprice/AUD.json").json()
-		# change this too
-		self.draw('%d' % res['bpi']['AUD']['rate_float'])
+		try:
+			# change AUD to the currency of your choice
+			r = urequests.get("http://api.coindesk.com/v1/bpi/currentprice/AUD.json")
+			# change this AUD too
+			rate = '%d' % r.json()['bpi']['AUD']['rate_float']
+			# it's mandatory to close response objects as soon as you finished working with them.
+			r.close()
+		except KeyError:
+			rate = "0"
+		self.draw(rate)
 
 	def draw(self, string):
 		# clear
