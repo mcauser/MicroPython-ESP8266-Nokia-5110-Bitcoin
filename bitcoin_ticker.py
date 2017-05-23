@@ -10,7 +10,7 @@ Usage:
 	RST = Pin(4, Pin.OUT)
 	CE = Pin(5, Pin.OUT)
 	DC = Pin(15, Pin.OUT)
-	BL = Pin(16, Pin.OUT)
+	BL = Pin(12, Pin.OUT)
 	lcd = PCD8544(spi, RST, CE, DC, BL)
 
 	from bitcoin_ticker import BitcoinTicker

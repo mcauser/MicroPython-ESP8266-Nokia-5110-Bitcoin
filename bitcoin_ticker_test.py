@@ -5,7 +5,7 @@
 # D7 (GPIO13) ---- 3 Din
 # D5 (GPIO14) ---- 4 Clk
 # 3V3 ------------ 5 Vcc
-# D0 (GPIO16) ---- 6 BL
+# D6 (GPIO12) ---- 6 BL
 # G -------------- 7 Gnd
 
 from machine import Pin, SPI
@@ -17,7 +17,7 @@ spi.init(baudrate=8000000, polarity=0, phase=0)
 RST = Pin(4, Pin.OUT)
 CE = Pin(5, Pin.OUT)
 DC = Pin(15, Pin.OUT)
-BL = Pin(16, Pin.OUT)
+BL = Pin(12, Pin.OUT)
 lcd = PCD8544(spi, RST, CE, DC, BL)
 
 from bitcoin_ticker import BitcoinTicker

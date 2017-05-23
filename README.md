@@ -119,7 +119,7 @@ D8 (GPIO15)   | 2 DC
 D7 (GPIO13)   | 3 Din
 D5 (GPIO14)   | 4 Clk
 3V3           | 5 Vcc
-D0 (GPIO16)   | 6 BL
+D6 (GPIO12)   | 6 BL
 G             | 7 Gnd
 
 ## Links
