@@ -113,8 +113,8 @@ The 84x48 PCD8544 buffer:
 
 WeMos D1 Mini | Nokia 5110 PCD8544 LCD
 ------------- | ---------------
-D2 (GPIO4)    | 0 RST
-D1 (GPIO5)    | 1 CE
+D3 (GPIO0)    | 0 RST
+D4 (GPIO2)    | 1 CE
 D8 (GPIO15)   | 2 DC
 D7 (GPIO13)   | 3 Din
 D5 (GPIO14)   | 4 Clk
