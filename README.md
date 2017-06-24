@@ -26,7 +26,7 @@ The 84x48 PCD8544 buffer:
 		* make erase
 		* copy bitcoin_ticker.py to /esp8266/modules
 		* copy bitcoin_ticker_test.py to /esp8266/modules
-		* copy upcd8544.py to /esp8266/modules
+		* copy pcd8544.py to /esp8266/modules
 		* make deploy
 
 2. Connect to WiFi, credentials are persisted, so you wont need to enter them each time
@@ -124,10 +124,10 @@ G             | 7 Gnd
 
 ## Links
 
+* [MicroPython PCD8544 Driver](https://github.com/mcauser/micropython-pcd8544)
 * [WeMos D1 Mini](https://www.wemos.cc/product/d1-mini.html)
 * [micropython.org](http://micropython.org)
 
 ## Credits
 
-* Markus Birth's [wipy Nokia 5110 library](https://github.com/mbirth/wipy-upcd8544) (MIT license) with [my ESP8266 modifications](https://github.com/mbirth/wipy-upcd8544/issues/1).
 * Bitcoin Logo [Wikipedia](https://commons.wikimedia.org/wiki/File:Bitcoin_logo.svg) (Creative Commons CC0 1.0)

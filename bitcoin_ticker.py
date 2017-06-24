@@ -2,16 +2,16 @@
 
 Usage:
 	from machine import Pin, SPI
-	from upcd8544 import PCD8544
+	from pcd8544 import PCD8544
 	import time
 
 	spi = SPI(1)
 	spi.init(baudrate=8000000, polarity=0, phase=0)
-	RST = Pin(0, Pin.OUT)
-	CE = Pin(2, Pin.OUT)
-	DC = Pin(15, Pin.OUT)
-	BL = Pin(12, Pin.OUT)
-	lcd = PCD8544(spi, RST, CE, DC, BL)
+	cs = Pin(2, Pin.OUT)
+	dc = Pin(15, Pin.OUT)
+	rst = Pin(0, Pin.OUT)
+	bl = Pin(12, Pin.OUT, value=1)
+	lcd = PCD8544(spi, cs, dc, rst)
 
 	from bitcoin_ticker import BitcoinTicker
 	ticker = BitcoinTicker(lcd)
@@ -54,10 +54,6 @@ class BitcoinTicker:
 
 		self.width = self.lcd.width		# 84
 		self.height = self.lcd.height	# 48
-
-		# backlight
-		self.lcd.light_on()
-		# self.lcd.light_off()
 
 		# the main FrameBuffer
 		self.buffer = bytearray((self.height // 8) * self.width)
