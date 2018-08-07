@@ -31,7 +31,7 @@ The 84x48 PCD8544 buffer:
 
 2. Connect to WiFi, credentials are persisted, so you wont need to enter them each time
 
-	```
+	```python
 	>>> import network
 	>>> sta_if = network.WLAN(network.STA_IF);
 	>>> sta_if.active(True)
@@ -42,21 +42,21 @@ The 84x48 PCD8544 buffer:
 
 	Disable the AP, unless you need it.
 
-	```
+	```python
 	>>> ap_if = network.WLAN(network.AP_IF)
 	>>> ap_if.active(False)
 	```
 
 3. Install urequests with upip. You need to be on WiFi for this to work.
 
-	```
+	```python
 	>>> import upip
 	>>> upip.install('micropython-urequests')
 	```
 
 	Did it install?
 
-	```
+	```python
 	>>> import os
 	>>> os.listdir()
 	['boot.py', 'lib']
@@ -68,7 +68,7 @@ The 84x48 PCD8544 buffer:
 
 4. Run the demo
 
-	```
+	```python
 	import bitcoin_ticker_test
 	```
 
@@ -131,3 +131,7 @@ G             | 7 Gnd
 ## Credits
 
 * Bitcoin Logo [Wikipedia](https://commons.wikimedia.org/wiki/File:Bitcoin_logo.svg) (Creative Commons CC0 1.0)
+
+## License
+
+Licensed under the [MIT License](http://opensource.org/licenses/MIT).
